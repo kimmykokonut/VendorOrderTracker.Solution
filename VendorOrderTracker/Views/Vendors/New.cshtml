@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+<h3>Fill out this form to become one of our vendors</h3>
+<form action="/vendors" method="post">
+<label for="vName">Name:</label>
+  <input id="vName" name="vName" type="text" placeholder="Babbo's Bakery">
+<br />
+  <label for="vDescription">Description:</label>
+  <textarea id="vDescription" name="vDescription" placeholder="Wholesale purveyor of breads and pastries"></textarea>
+  <br />
+  <label for="vPhone">Phone number:</label>
+  <input id="vPhone" name="vPhone" type="number" placeholder="555-867-5309">
+
+<button type="submit">Join</button>
+</form>
+
+<button><a href="/vendors">Vendor List</a></button>
