@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+@using VendorOrderTracker.Models
+<h3>Vendor Details Page</h3>
+<hr />
+<h4>@Model["vendor"].Name</h4>
+<p>@Model["vendor"].Description</p>
+<p>@Model["vendor"].Phone</p>
+<br />
+<h4>Your orders</h4>
+<ul>
+  <li>Order # 1</li>
+</ul>
+
+<button><a href='/vendors/@Model["vendor"].Id/orders/new'>Add an order</a></button>
