@@ -87,6 +87,21 @@ namespace VendorOrderTracker.TestTools
       List<Vendor> result = Vendor.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsVendors_VendorList()
+    {
+      string name = "Little T";
+      string description = "A neighborhood bakery specializing in locally sourced ingredients";
+      string phone2 = "5551231234";
+      string name2 = "Panificio Bondi";
+      string description2 = "Sicily in your mouth";
+      string phone = "8880004444";
+      Vendor vendor1 = new Vendor(name, description, phone);
+      Vendor vendor2 = new Vendor(name2, description2, phone2);
+      List<Vendor> newList = new List<Vendor> { vendor1, vendor2 };
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
 
 
   }
