@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+<h3>Fill out this form to place an order</h3>
+<form action="/vendors/@Model.Id/orders" method="post">
+  <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
+  
+  <label for="oTitle">Title:</label>
+  <input id="oTitle" name="oTitle" type="text" placeholder="Scones">
+  <br />
+  <label for="oDescription">Description:</label>
+  <textarea id="oDescription" name="oDescription" placeholder="Cranberry Orange scones"></textarea>
+  <br />
+  <label for="price">Phone number:</label>
+  <input id="price" name="price" type="number" placeholder="5">
+
+  <button type="submit">Place Order</button>
+</form>
+
+<button><a href="/vendors/@Model.Id">Return to your vendor detail page</a></button>
+
+<button><a href="/vendors/">Main vendor list page</a></button>
