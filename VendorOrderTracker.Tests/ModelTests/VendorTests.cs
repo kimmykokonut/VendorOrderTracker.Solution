@@ -112,6 +112,20 @@ namespace VendorOrderTracker.TestTools
       int result = testVendor.Id;
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      string name = "Little T";
+      string description = "A neighborhood bakery specializing in locally sourced ingredients";
+      string phone = "5551231234";
+      string name2 = "Panificio Bondi";
+      string description2 = "Sicily in your mouth";
+      string phone2 = "8880004444";
+      Vendor vendor1 = new Vendor(name, description, phone);
+      Vendor vendor2 = new Vendor(name2, description2, phone2);
+      Vendor result = Vendor.Find(2);
+      Assert.AreEqual(vendor2, result);
+    }
 
 
   }
