@@ -60,6 +60,18 @@ namespace VendorOrderTracker.TestTools
       int result = testOrder.Price;
       Assert.AreEqual(price, result);
     }
+    [TestMethod]
+    public void SetPrice_SetsValueOfPrice_Int()
+    {
+      string title = "Scone";
+      string description = "A vegan take on the British classic";
+      int price = 5;
+      Order testOrder = new Order(title, description, price);
+      int updatedPrice = 10;
+      testOrder.Price = updatedPrice;
+      int result = testOrder.Price;
+      Assert.AreEqual(updatedPrice, result);
+    }
 
 
 
