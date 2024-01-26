@@ -39,5 +39,16 @@ namespace VendorOrderTracker.TestTools
       string result = testOrder.Description;
       Assert.AreEqual(description, result);
     }
+    [TestMethod]
+    public void SetDescription_SetsValueOfDescription_String()
+    {
+      string title = "Scone";
+      string description = "A vegan take on the British classic";
+      Order testOrder = new Order(title, description);
+      string updatedDescription = "You won't miss the dairy in this treat";
+      testOrder.Description = updatedDescription;
+      string result = testOrder.Description;
+      Assert.AreEqual(updatedDescription, result);
+    }
   }
 }
