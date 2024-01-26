@@ -4,10 +4,12 @@ namespace VendorOrderTracker.Models
   {
     public string Name { get; set; }
     public string Description { get; set; }
-    public Vendor(string name, string description)
+    public string Phone { get; }
+    public Vendor(string name, string description, string phone)
     {
       Name = name;
       Description = description;
+      Phone = phone;
     }
   }
 }
