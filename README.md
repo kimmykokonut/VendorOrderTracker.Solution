@@ -1,21 +1,14 @@
-## Template for ASP.NET Core MVC web application
-
-* set up project files, folders, and configure a host
-
-### Setup
-* Make sure parent directory is ProjectName.Solution
-* Change file names as necessary
-* commit .gitignore first
-
-----------------
-Readme from C# Console App- toupdate
-# ProjectName
+# Babbo's Bakery
 _by Kim Robinson_
 
-## Description
+## Code Review Independent Project for Epicodus
+_Demonstrating knowledge of building a Basic Web Application using C# .NET Core Mvc_
 
 ###  This app will allow a user to:
-    - 
+    - Navigate to a Vendors List page
+    - Create New Vendor with a form
+    - See Vendor's detail page
+    - Create new Order for specific Vendor
 
 ### Technologies Used
 
@@ -23,15 +16,21 @@ _by Kim Robinson_
 * MSTest
 * TDD (Test Driven Development)
 * RGR Workflow (Red Green Refactor)
-* .Net
+* .NET
 * Git
 * NuGet package with dotnet CLI
+* Razor Markup Syntax
+* Mvc
+* Http CRUD methods
+* RESTful Routing
+* Applying Layouts and Partials
+* Objects within Objects Interface
 
 ## Setup/Installation Requirements
 
 _Currently not viewable on gh-pages. Please follow steps below to set up locally_
 
-1. Navigate to [my github repository](https://github.com/kimmykokonut/XXX) for this project 
+1. Navigate to [my github repository](https://github.com/kimmykokonut/VendorOrderTracker.Solution) for this project 
 
 2. Click the `Fork` button and  you will be taken to a new page where you can give your repository a new name and description. Choose "create fork".
 
@@ -59,11 +58,11 @@ In the Terminal:
 
 11.  Optionally you can use a file watcher so you don't have to restart the server every time the code changes. Run this command `$ dotnet watch run` to make the server automatically update.
 
-12. In the terminal, type `$ dotnet run` (to compile and execute the console application ).
+12. In the terminal, type `$ dotnet run` (to compile and execute the console application).  Now you can see my application on your  [local server](https://localhost:5000).
 
 13. Enjoy!  You can close the development server at anytime by entering `ctrl` + `c` in the terminal.
 
-* To run tests using MSTest, navigate to the ProjectName.Tests directory in your terminal and type `$ dotnet test`
+* To run tests using MSTest, navigate to the VendorOrderTracker.Tests directory in your terminal and type `$ dotnet test`
 
 ## Known Bugs
 * None known at this time
