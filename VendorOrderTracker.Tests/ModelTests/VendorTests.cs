@@ -39,6 +39,17 @@ namespace VendorOrderTracker.TestTools
       string result = newVendor.Description;
       Assert.AreEqual(description, result);
     }
+    [TestMethod]
+    public void SetDescription_SetsValueOfDescription_String()
+    {
+      string name = "Little T";
+      string description = "A neighborhood bakery specializing in locally sourced ingredients";
+      Vendor newVendor = new Vendor(name, description);
+      string updatedDescription = "A bakery that only sells ciabatta";
+      newVendor.Description = updatedDescription;
+      string result = newVendor.Description;
+      Assert.AreEqual(updatedDescription, result);
+    }
 
 
   }
