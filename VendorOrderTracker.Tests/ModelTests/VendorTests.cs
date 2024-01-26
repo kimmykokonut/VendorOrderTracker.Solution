@@ -126,6 +126,26 @@ namespace VendorOrderTracker.TestTools
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(vendor2, result);
     }
+    [TestMethod]
+    public void AddOrder_AssociateOrderWithVendor_OrderList()
+    {
+      string title = "Scone";
+      string orderDescription = "A biscuit-like treat full of butter";
+      int price = 5;
+      Order testOrder = new Order(title, orderDescription, price);
+      List<Order> testList = new List<Order>{ testOrder };
+
+      string name = "Little T";
+      string vendorDescription = "A neighborhood bakery specializing in locally sourced ingredients";
+      string phone = "5551231234";
+      Vendor testVendor = new Vendor(name, vendorDescription, phone);
+
+      testVendor.AddOrder(testOrder);
+
+      List<Order> result = testVendor.Orders;
+      CollectionAssert.AreEqual(testList, result);
+    }
+
 
 
   }
