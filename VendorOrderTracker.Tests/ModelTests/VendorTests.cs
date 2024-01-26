@@ -62,6 +62,18 @@ namespace VendorOrderTracker.TestTools
       string result = newVendor.Phone;
       Assert.AreEqual(phone, result);
     }
+    [TestMethod]
+    public void SetPhone_SetsValueOfPhone_String()
+    {
+      string name = "Little T";
+      string description = "A neighborhood bakery specializing in locally sourced ingredients";
+      string phone = "5551231234";
+      Vendor newVendor = new Vendor(name, description, phone);
+      string updatedPhone = "A bakery that only sells ciabatta";
+      newVendor.Phone = updatedPhone;
+      string result = newVendor.Phone;
+      Assert.AreEqual(updatedPhone, result);
+    }
 
 
   }
