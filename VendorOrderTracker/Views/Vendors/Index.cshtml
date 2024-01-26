@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html>
+@{
+  Layout = "_Layout";
+}
+<h2>Our Valued Vendors</h2>
+@using VendorOrderTracker.Models;
 
-<head>
-  <title>TITLE</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <meta charset='utf-8'>
-</head>
-
-<body>
-</body>
-
-</html>
+@if (@Model.Count == 0)
+{
+  <h4>Status: No active vendors</h4>
+}
+@foreach (Vendor vendor in Model)
+{
+  <h4><a href='/vendors/@vendor.Id'>@vendor.Name</a></h4>
+}
+<button><a href='/'>to home</a></button>
