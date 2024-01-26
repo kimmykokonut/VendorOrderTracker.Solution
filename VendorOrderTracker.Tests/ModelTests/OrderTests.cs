@@ -121,6 +121,21 @@ namespace VendorOrderTracker.TestTools
       int result = testOrder.Id;
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      string title = "Scone";
+      string description = "A biscuit-like treat full of butter";
+      int price = 5;
+      Order testOrder1 = new Order(title, description, price);
+      string title2 = "Bagel";
+      string description2 = "Boiled and baked to perfection";
+      int price2 = 3;
+      Order testOrder2 = new Order(title2, description2, price2);
+      Order result = Order.Find(2);
+      Assert.AreEqual(testOrder2, result);
+    }
+
 
 
 
