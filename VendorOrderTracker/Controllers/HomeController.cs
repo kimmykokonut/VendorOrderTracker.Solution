@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace VendorOrderTracker.Controllers //change name
+namespace VendorOrderTracker.Controllers 
 {
   public class HomeController : Controller
   {
