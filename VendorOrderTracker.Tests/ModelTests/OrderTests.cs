@@ -1,5 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VendorOrderTracker.Models;
+using System;
+using System.Collections.Generic;
 
 namespace VendorOrderTracker.TestTools
 {
@@ -71,6 +73,17 @@ namespace VendorOrderTracker.TestTools
       testOrder.Price = updatedPrice;
       int result = testOrder.Price;
       Assert.AreEqual(updatedPrice, result);
+    }
+    [TestMethod]
+    public void GetDate_ReturnsTimeStampDate_Date()
+    {
+      string title = "Scone";
+      string description = "A vegan take on the British classic";
+      int price = 5;
+      Order testOrder = new Order(title, description, price);
+      DateTime timeStamp = testOrder.DateOrder;
+      DateTime result = DateTime.Now;
+      Assert.AreEqual(timeStamp.Date, result.Date);
     }
 
 
