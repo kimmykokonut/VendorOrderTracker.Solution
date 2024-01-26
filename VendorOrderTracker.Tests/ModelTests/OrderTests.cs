@@ -20,5 +20,15 @@ namespace VendorOrderTracker.TestTools
       string result = testOrder.Title;
       Assert.AreEqual(title, result);
     }
+    [TestMethod]
+    public void SetTitle_SetsValueOfTitle_String()
+    {
+      string title = "Scone";
+      Order testOrder = new Order(title);
+      string updatedTitle = "Danish";
+      testOrder.Title = updatedTitle;
+      string result = testOrder.Title;
+      Assert.AreEqual(updatedTitle, result);
+    }
   }
 }
