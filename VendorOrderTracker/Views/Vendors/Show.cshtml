@@ -10,8 +10,11 @@
 <br />
 <h4>Your orders</h4>
 <ul>
-  <li>Order # 1</li>
+  @foreach (Order order in @Model["orders"])
+  {
+    <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+  }
 </ul>
-<p>or button to see orders per vendor?</p>
+<p>Click on each order to see it's details</p>
 
-<button><a href='/vendors/@Model["vendor"].Id/orders/new'>Add an order</a></button>
+<button><a href='/vendors/@Model["vendor"].Id/orders/new'>New order</a></button>
