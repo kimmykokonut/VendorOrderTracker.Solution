@@ -111,6 +111,16 @@ namespace VendorOrderTracker.TestTools
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void GetId_OrderCreatesWithIdAndGetReturnsOrderId_Int()
+    {
+      string title = "Scone";
+      string description = "A biscuit-like treat full of butter";
+      int price = 5;
+      Order testOrder = new Order(title, description, price);
+      int result = testOrder.Id;
+      Assert.AreEqual(1, result);
+    }
 
 
 

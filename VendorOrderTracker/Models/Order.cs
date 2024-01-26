@@ -10,6 +10,8 @@ namespace VendorOrderTracker.Models
     public int Price { get; set; }
     public DateTime DateOrder { get; set; }
     private static List<Order> _instances = new List<Order> { };
+    public int Id { get; }
+
 
     public Order(string title, string description, int price)
     {
@@ -18,6 +20,7 @@ namespace VendorOrderTracker.Models
       Price = price;
       DateOrder = DateTime.Now;
       _instances.Add(this);
+      Id = _instances.Count;
     }
     public static List<Order> GetAll()
     {
