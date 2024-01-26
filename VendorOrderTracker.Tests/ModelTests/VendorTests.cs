@@ -1,11 +1,17 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VendorOrderTracker.Models;
+using System;
+using System.Collections.Generic;
 
 namespace VendorOrderTracker.TestTools
 {
   [TestClass]
-  public class VendorTests 
+  public class VendorTests : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
@@ -73,6 +79,13 @@ namespace VendorOrderTracker.TestTools
       newVendor.Phone = updatedPhone;
       string result = newVendor.Phone;
       Assert.AreEqual(updatedPhone, result);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_VendorList()
+    {
+      List<Vendor> newList = new List<Vendor> { };
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
 
 
