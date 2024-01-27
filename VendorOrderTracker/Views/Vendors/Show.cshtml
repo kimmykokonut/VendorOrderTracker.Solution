@@ -6,15 +6,24 @@
 <hr />
 <h4>@Model["vendor"].Name</h4>
 <p>@Model["vendor"].Description</p>
-<p>@Model["vendor"].Phone</p>
+<p>Phone: @Model["vendor"].Phone</p>
 <br />
 <h4>Your orders</h4>
+@if (@Model["orders"].Count == 0)
+{
+  <h3>No active orders</h3>
+}
 <ul>
   @foreach (Order order in @Model["orders"])
   {
     <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
   }
 </ul>
-<p>Click on each order to see it's details</p>
+@if (@Model["orders"].Count > 0)
+{
+  <p>Click on each order to see it's details</p>
+}
+
+
 
 <button><a href='/vendors/@Model["vendor"].Id/orders/new'>New order</a></button>
