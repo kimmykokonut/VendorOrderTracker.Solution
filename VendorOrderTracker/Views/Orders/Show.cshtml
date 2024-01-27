@@ -2,15 +2,15 @@
   Layout = "_Layout";
 }
 @using VendorOrderTracker.Models
-<h3>Order Details Page</h3>
-<hr />
-<h2>@Model["vendor"].Name</h2>
-<hr />
-<h3>Order: @Model["order"].Title</h3>
-<br />
-<p>Details: @Model["order"].Description</p>
-<p>Price: $@Model["order"].Price</p>
-<p>Date ordered: @Model["order"].DateOrder</p>
-
-<button><a href='/vendors/@Model["vendor"].Id/orders/new'>New order</a></button>
-<button><a href='/vendors/@Model["vendor"].Id'>Back to your vendor page</a></button>
+<div id="orderDetails">
+  <h2>@Model["vendor"].Name</h2>
+  <hr />
+  <h3>Order: @Model["order"].Title</h3>
+  <br />
+  <h5>Details: @Model["order"].Description</h5>
+  <h5>Price: $@Model["order"].Price</h5>
+  <p>Date ordered: @Model["order"].DateOrder</p>
+  <br />
+  <button class="button-62" role="button"><a href='/vendors/@Model["vendor"].Id/orders/new'>New order</a></button>
+  <button class="button-62" role="button"><a href='/vendors/@Model["vendor"].Id'>Back to your vendor page</a></button>
+</div>

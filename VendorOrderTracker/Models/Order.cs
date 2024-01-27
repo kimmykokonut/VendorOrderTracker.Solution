@@ -12,7 +12,6 @@ namespace VendorOrderTracker.Models
     private static List<Order> _instances = new List<Order> { };
     public int Id { get; }
 
-
     public Order(string title, string description, string price)
     {
       Title = title;
@@ -34,6 +33,5 @@ namespace VendorOrderTracker.Models
     {
       return _instances[searchId - 1];
     }
-
   }
 }

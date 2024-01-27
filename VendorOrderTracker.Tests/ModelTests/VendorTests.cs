@@ -133,7 +133,7 @@ namespace VendorOrderTracker.TestTools
       string orderDescription = "A biscuit-like treat full of butter";
       int price = 5;
       Order testOrder = new Order(title, orderDescription, price);
-      List<Order> testList = new List<Order>{ testOrder };
+      List<Order> testList = new List<Order> { testOrder };
 
       string name = "Little T";
       string vendorDescription = "A neighborhood bakery specializing in locally sourced ingredients";
@@ -145,8 +145,5 @@ namespace VendorOrderTracker.TestTools
       List<Order> result = testVendor.Orders;
       CollectionAssert.AreEqual(testList, result);
     }
-
-
-
   }
 }

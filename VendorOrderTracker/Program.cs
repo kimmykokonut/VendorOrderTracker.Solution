@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace VendorOrderTracker
 {
-  class Program 
+  class Program
   {
     static void Main(string[] args)
     {

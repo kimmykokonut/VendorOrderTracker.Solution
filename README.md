@@ -2,13 +2,15 @@
 _by Kim Robinson_
 
 ## Code Review Independent Project for Epicodus
-_Demonstrating knowledge of building a Basic Web Application using C# .NET Core Mvc_
+_Demonstrating knowledge of building a Basic Web Application using C# .NET Core Mvc and MSTest_
 
 ###  This app will allow a user to:
     - Navigate to a Vendors List page
     - Create New Vendor with a form
-    - See Vendor's detail page
+    - See Vendor's detail page with list of Orders
     - Create new Order for specific Vendor
+    - See specific order details
+    - Navigate to splash page on every view
 
 ### Technologies Used
 

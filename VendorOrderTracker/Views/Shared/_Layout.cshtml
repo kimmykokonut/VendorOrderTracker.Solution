@@ -10,10 +10,11 @@
 </head>
 
 <body>
-  <h1>Babbo's Bakery Header from Layout</h1>
+  <div id="header">
+    <h1>Babbo's Bakery</h1>
+    <button class="button-62 mx-5" role="button" sty><a href="/">⌂</a></button>
+  </div>
   <hr />
-  <button><a href="/">Home</a></button>
-<hr/>
   @RenderBody()
   @await Html.PartialAsync("Footer")
 </body>

@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace VendorOrderTracker.Controllers 
+namespace VendorOrderTracker.Controllers
 {
   public class HomeController : Controller
   {
     [HttpGet("/")]
-    public ActionResult Index() 
+    public ActionResult Index()
     {
       return View();
     }

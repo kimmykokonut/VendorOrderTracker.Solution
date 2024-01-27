@@ -18,7 +18,7 @@ namespace VendorOrderTracker.Models
       Phone = phone;
       _instances.Add(this);
       Id = _instances.Count;
-      Orders = new List<Order>{};
+      Orders = new List<Order> { };
     }
     public static void ClearAll()
     {

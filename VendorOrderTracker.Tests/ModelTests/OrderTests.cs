@@ -135,10 +135,5 @@ namespace VendorOrderTracker.TestTools
       Order result = Order.Find(2);
       Assert.AreEqual(testOrder2, result);
     }
-
-
-
-
-
   }
 }
