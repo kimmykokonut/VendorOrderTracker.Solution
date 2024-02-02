@@ -5,13 +5,13 @@
 <form action="/vendors/@Model.Id/orders" method="post">
   <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
   <label for="oTitle">Title:</label>
-  <input id="oTitle" name="oTitle" type="text" placeholder="Scones">
+  <input id="oTitle" name="oTitle" type="text" placeholder="Scones" required>
   <br />
   <label for="oDescription">Description:</label>
-  <textarea id="oDescription" name="oDescription" placeholder="Cranberry Orange scones"></textarea>
+  <textarea id="oDescription" name="oDescription" placeholder="Cranberry Orange scones" required></textarea>
   <br />
   <label for="price">Price:</label>
-  <input id="price" name="price" type="number" placeholder="5">
+  <input id="price" name="price" type="number" placeholder="5" required>
   <button type="submit" class="button-62" role="button">Place Order</button>
 </form>
 <br />
