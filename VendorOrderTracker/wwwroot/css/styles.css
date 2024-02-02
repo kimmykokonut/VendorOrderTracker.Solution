@@ -3,7 +3,10 @@ body {
   font-weight: 700;
   margin-left: 5%;
   margin-right: 5%;
-  background-color: #f0efe8;
+  background: linear-gradient(to bottom, #99ccff 0%, #246ee9 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 #header {
