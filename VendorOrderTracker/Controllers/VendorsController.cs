@@ -34,7 +34,7 @@ namespace VendorOrderTracker.Controllers
       return View(model);
     }
     [HttpPost("/vendors/{vendorId}/orders")]
-    public ActionResult Create(int vendorId, string oTitle, string oDescription, int price) 
+    public ActionResult Create(int vendorId, string oTitle, string oDescription, int price)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor foundVendor = Vendor.Find(vendorId);

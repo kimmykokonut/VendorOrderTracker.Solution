@@ -11,6 +11,6 @@
   <h5>Price: $@Model["order"].Price</h5>
   <p>Date ordered: @Model["order"].DateOrder</p>
   <br />
-  <button class="button-62" role="button"><a href='/vendors/@Model["vendor"].Id/orders/new'>New order</a></button>
-  <button class="button-62" role="button"><a href='/vendors/@Model["vendor"].Id'>Back to your vendor page</a></button>
+  <a href='/vendors/@Model["vendor"].Id/orders/new' class="button-62">New order</a>
+  <a href='/vendors/@Model["vendor"].Id' class="button-62">Back to your vendor page</a>
 </div>
